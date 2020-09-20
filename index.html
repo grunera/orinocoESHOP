@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Liste produits</title>
+
+</head>
+ 
+<body class="bg-light">
+  <div class="container bg-white p-5 mt-5">
+    <!-- Logo -->
+    <div>
+      <h1>Ma Boutique en ligne</h1>
+      <img src="logo.png" width="300" height="300" class="img-fluid">
+    </div>
+    <!-- Button to call the products -->
+    <button class="btn btn-primary mt-2 mb-2" onclick="populateTableList3();">Show All</button>
+    <!-- Table  -->
+      <table class="table table-image">
+        <thead class="thead-dark">
+          <tr class="text-center">
+            <th>id</th>
+            <th>imageUrl</th>
+            <th>name</th>
+            <th>price</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <!-- Table body with the list of products -->
+        <tbody id="productArray">
+  <!-- Le javascript productList.js va se charger de remplir le tableau -->
+        </tbody>
+      </table>
+      </div>
+</body>
+
+   <script src="productList.js" async></script>
+   <script src="teddy.js" async></script>
+   <script src="server.js" async></script>
+   <script src="app.js" async></script>
+</html>
