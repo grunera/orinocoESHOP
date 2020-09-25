@@ -24,7 +24,7 @@ function displayListProducts(products){
 }
 
 function displayItemProduct(product,listElement){
-	const itemElement = document.createElement('div')
+	const itemElement = document.createElement('div');
 
 
 
@@ -33,8 +33,12 @@ function displayItemProduct(product,listElement){
 	itemElement._id = product._id;
 	itemElement.price = product.price;
 
+	const imageElt = document.createElement("img");
+    imageElement.src = imageUrl;
+   
 
-    listElement.appendChild(itemElement)
+     listElement.appendChild(itemElement);
+     listElement.appendChild(imageElement);
 
 }
 
