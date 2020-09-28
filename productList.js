@@ -5,7 +5,7 @@
 
 
 
-async function getProducts(){
+init()async function getProducts(){
 	const response = await fetch('http://localhost:3000/api/teddies')
     return response.json()
 
@@ -24,23 +24,47 @@ function displayListProducts(products){
 }
 
 function displayItemProduct(product,listElement){
-	const itemElement = document.createElement('div');
+	const itemElement = document.createElement('article');
+
+	const myH2 = document.createElement('h2');
+    const myPara1 = document.createElement('img');
+    const myPara2 = document.createElement('p');
+    const myPara3 = document.createElement('p');
+    const myList = document.createElement('ul');
+
+    myH2.textContent = product.name;
+    myPara1.imageUrl = product.imageUrl;
+    myPara2.textContent = product._id;        
+    myPara3.textContent = product.price;
+    myPara4.textContent = product.colors;
+
+    }
+
+    const colors = product.colors; {
+     var listItem = document.createElement('li');
+          listItem.textContent = colors;
+          myList.appendChild(listItem);
+        }
+
+     itemElement.appendChild(myH2);
+     itemElement.appendChild(myPara1);
+     itemElement.appendChild(myPara2);
+     itemElement.appendChild(myPara3);
+     itemElement.appendChild(myList);
+
+ }
 
 
+       listELement.appendChild(itemElement);
+     
 
-	itemElement.textContent = product.name;
-	itemElement.imageUrl = product.imageUrl;
-	itemElement._id = product._id;
-	itemElement.price = product.price;
+ }
 
-	const imageElt = document.createElement("img");
-    imageElement.src = imageUrl;
-   
+	
 
-     listElement.appendChild(itemElement);
-     listElement.appendChild(imageElement);
-
-}
+// correction displayItemProduct ajout à un listElement :
+// un element dans lequel il y a un element image, un element texte avec le nom du produit et un element texte avec le prix du produit
+//donc const priceElement / titleElement / imageElement dans itemElement qui lui même est => listElement
 
   
 async function init(){
@@ -64,9 +88,6 @@ async function init(){
 
 
 
-
-
-init()
 
 
 
