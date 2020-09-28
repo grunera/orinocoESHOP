@@ -1,0 +1,126 @@
+/* || general styles */
+
+html {
+  font-family: arial, sans-serif;
+  width:100%;
+}
+
+body {
+  background-color : white;
+  width : 100%;
+  font-family : sans-serif;
+  
+
+}
+
+#entete {
+  display:flex;
+  flex-direction: column;
+  vertical-align: left;
+  max-width:100%;
+}
+#logo {
+ 
+  width:50%;
+  margin-bottom: 10px;
+  padding-left:20px;
+  
+  
+}
+
+
+h1, h2 {
+  font-family: arial, sans-serif;
+}
+
+/* header styles */
+
+h1 {
+  font-size: 3rem;
+  text-align: left;
+}
+
+section p {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* section styles */
+
+
+/* produits */
+div.produit {
+  width : 32.5%;  
+  float:left;
+  justify-content: center;
+  height : 500px;
+  display : inline-block;
+  background-color: rgba(255,255,255,0);
+  box-shadow : 0px 0px 6px 2px  grey inset;
+  border-radius : 4px;
+  margin : 2px 2px;
+  padding : 10px;
+}
+
+ 
+div.produit img {
+  margin : auto;  
+  width : 90%;  
+  text-align : center;
+}
+
+
+/* buttons */
+.btn {
+  width : 25px;
+  height : 25px;
+  background-size : cover;
+  border : solid 2px white;
+  opacity : 0.25;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section article {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+section p {
+  margin: 5px 0;
+}
+
+section ul {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -5px;
+  margin-bottom: 10px;
+}
