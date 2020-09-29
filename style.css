@@ -54,7 +54,7 @@ div.produit {
   width : 32.5%;  
   float:left;
   justify-content: center;
-  height : 500px;
+  height : 550px;
   display : inline-block;
   background-color: rgba(255,255,255,0);
   box-shadow : 0px 0px 6px 2px  grey inset;
@@ -72,15 +72,28 @@ div.produit img {
 
 
 /* buttons */
-.btn {
+a {
   width : 25px;
-  height : 25px;
+  height : 100px;
   background-size : cover;
-  border : solid 2px white;
-  opacity : 0.25;
+  background-color : grey;
+  color: white;
+  text-decoration: none;
+  box-shadow : 0px 0px 2px 2px  white inset;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 15px;
+  border-radius : 4px;
+  margin-top: 20px;
+  margin-left: 120px;
+  
 }
 
 
+a:hover
+{
+    color: blue;
+}
 
 
 
