@@ -3,14 +3,14 @@
 html {
   font-family: arial, sans-serif;
   width:100%;
+  background-color:rgb(242,242,242);
 }
 
 body {
   background-color : white;
-  width : 100%;
+  width : 80%;
+  margin: auto;
   font-family : sans-serif;
-  
-
 }
 
 #entete {
@@ -18,10 +18,11 @@ body {
   flex-direction: column;
   vertical-align: left;
   max-width:100%;
+  margin:auto;
 }
 #logo {
  
-  width:50%;
+  width:40%;
   margin-bottom: 10px;
   padding-left:20px;
   
@@ -40,6 +41,11 @@ h1 {
   text-align: left;
 }
 
+section {
+  background-color: white;
+}
+
+
 section p {
   font-size: 1rem;
   font-weight: normal;
@@ -50,13 +56,21 @@ section p {
 
 
 /* produits */
+
+#boutique {
+  background-color:white;
+  width:100%;
+  display:block;
+
+}
+
 div.produit {
-  width : 32.5%;  
-  float:left;
-  justify-content: center;
+  width : 40%;  
+  
+  
   height : 550px;
   display : inline-block;
-  background-color: rgba(255,255,255,0);
+  background-color: white;
   box-shadow : 0px 0px 6px 2px  grey inset;
   border-radius : 4px;
   margin : 2px 2px;
