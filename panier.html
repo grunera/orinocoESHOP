@@ -7,11 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <link rel="stylesheet" href="css/style.css" />
-  <title>Page Produit</title>
+  <title>Formulaire de commande</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 
-  <script src="brouillonpageproduit.js"></script>
-  
+   
 </head>
 
 
@@ -21,7 +20,7 @@
       <div class="row">
         <nav class="col navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="index.html">
-            <img class="img-fluid"  src="logo.png" width="200" height="200" alt="Logo" />
+            <img class="img-fluid"  src="logo.png" width="200" height="100" alt="Logo" />
             </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,7 +40,7 @@
             <ul class="navbar-nav ml-auto">
                <li class="nav-item active">
                 <a class="nav-link ml-4 mr-4" href="panier.html">
-                  <img class="iconechariot" src="chariotgris1.png" width="50" height="50" alt="icone chariot" />
+                  <img class="iconechariot" src="chariotgris1.png" width="40" height="40" alt="icone chariot" />
                 Panier
                   <div class="dropdown">
                   <div id="cart">
@@ -65,81 +64,64 @@
       </div>
     </div>
   </div>
-
-   <div class="row">
-      <div class="col-6 col-lg-3>
-        <div class="card ml-4 mb-4 mt-lg-4 border-grey">
-            <div class="card-body">
-            <div id="product">
-              <h1> Fiche produit</h1>
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
+<div class="row">
+       <div class="col-12 col-lg-8">
+        <div class="card mb-4 mt-lg-4 border-grey ">
+          <div class="card-body">
+            <h2 class="name"><span class="font-weight-bold">Votre panier</span></h5>  
+            <table class="table">
+              <thead>
+                <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
+              </thead>
+              <tbody id="cart-tablebody"></tbody>
+            </table>
+            <p>Sous total : <span class="subtotal"></span>€</p>
+            <form>
+            <button type="submit" formaction="formulairecommande.html">Passer la commande</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-   <div class="row">
- <div class="col-8 col-lg-8 ml-5">
-  <div class="card ml-4 mb-4 mt-lg-4 border-grey">
-        
-                <div id="focusproduit">
+</div>
+
+ <script src="panier.js" defer></script>
+
+</body>
+</html>
 
 
 
 
 
 
-                </div>
 
 
-                <div id="ajoutpanier">
 
 
-              
 
 
-                <legend class="ml-4"><h2>Ajouter au panier</h2></legend>
-                <label class="col-lg-2" >Quantité</label> : <input type = "number" id = "qte" style="width:120px" class="input-sm form-control"></input><br><br> 
-                
-               <button class="btn btn-primary ml-4" type="submit" id="submitbutton" ><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
-           
-         
-            <p class="stock ml-4 mt-4"> <span class="text-success"> En Stock</span></p>
-
-              </div>
 
 
-        </div>
-      </div>
-  
-   </body>
 
-<script src="productDetails.js" defer></script>
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>

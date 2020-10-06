@@ -19,25 +19,25 @@ body {
   vertical-align: left;
   max-width:100%;
   margin:auto;
+
 }
 #logo {
  
   width:40%;
   margin-bottom: 10px;
-  padding-left:20px;
-  
-  
+  padding-left:20px;   
 }
 
 
 h1, h2 {
   font-family: arial, sans-serif;
+  padding-left:20px;
 }
 
 /* header styles */
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.8rem;
   text-align: left;
 }
 
@@ -59,10 +59,13 @@ section p {
 
 #boutique {
   background-color:white;
-  width:100%;
-  display:block;
+  width:90%;
+  display:inline-block
+  margin-left:20px;
 
 }
+
+
 
 div.produit {
   width : 40%;  
@@ -80,7 +83,7 @@ div.produit {
  
 div.produit img {
   margin : auto;  
-  width : 90%;  
+  width : 80%;  
   text-align : center;
 }
 
@@ -151,3 +154,17 @@ h2 {
   letter-spacing: -5px;
   margin-bottom: 10px;
 }
+
+/* buttons */
+button.commander {
+  width : 25px;
+  height : 25px;
+  background-size : cover;
+  border : solid 2px white;
+  opacity : 0.25;
+}
+
+button.commander {
+  background-image : url("./images/panier.jpg");
+}
+
