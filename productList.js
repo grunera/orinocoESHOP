@@ -56,6 +56,14 @@ function displayItemProduct(product,listElement){
      itemElement.appendChild(myPara4);
      itemElement.appendChild(myList);
 
+
+    var btn = document.createElement("a");
+    btn.href = "details.html?id="+ product._id;
+    itemElement.appendChild(btn);
+    btn.textContent ="SHOW DETAILS"
+    
+
+
         listElement.appendChild(itemElement);
      
 
@@ -82,12 +90,7 @@ init()
  
   // Show details button
   
-var btn = document.createElement("button");
-    itemElement.appenChild(btn);
-    btn.innerHTML ="SHOW PRODUCT DETAIL"
-    btn.addEventListener("click",function(listELement) {
-    alert("")
-    })
+
 
 
 
