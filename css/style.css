@@ -41,10 +41,37 @@
     display: block;
 }
 
-img {
-  width: 50px
-  height:50px;
+/* buttons */
+button.commander {
+  width : 25px;
+  height : 25px;
+  background-size : cover;
+  border : solid 2px white;
+  opacity : 0.25;
 }
+
+button.commander {
+  background-image : url("./images/panier.jpg");
+}
+
+
+
+#product{
+  margin-left: 40px;
+  
+}
+
+
+h5{
+  font-weight: bold;
+}
+
+#cart-tablebody img{
+  width:80px;
+}
+
+
+
 
 *,
 *::before,
@@ -87,6 +114,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+
 }
 
 p {
@@ -206,8 +234,17 @@ figure {
 }
 
 img {
-  vertical-align: middle;
+  vertical-align: left;
   border-style: none;
+
+}
+
+#product img {
+ width:80%;
+}
+
+.spancouleur p{
+  color:red;
 }
 
 svg {
@@ -371,6 +408,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+  color:black;
 }
 
 h1, .h1 {
@@ -391,6 +429,7 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 1.25rem;
+  font-weight: bold;
 }
 
 h6, .h6 {
