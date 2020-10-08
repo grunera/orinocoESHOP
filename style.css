@@ -28,6 +28,9 @@ body {
   padding-left:20px;   
 }
 
+#total p{
+  font-size:2rem;
+}
 
 h1, h2 {
   font-family: arial, sans-serif;

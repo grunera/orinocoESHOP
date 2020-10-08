@@ -39,7 +39,7 @@ function displayItemProduct(product,listElement){
     myPara1.src = product.imageUrl;
     myPara2.textContent = 'id_Produit : ' + product._id;
     myPara3.textContent = 'Description : '+ product.description;      
-    myPara4.textContent = 'Prix : ' + product.price + '€';
+    myPara4.textContent = 'Prix : ' + product.price/100 + '€';
     myPara5.textContent = 'Choisissez votre coloris : ';
   
     const colors = product.colors; 
