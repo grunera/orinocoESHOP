@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <link rel="stylesheet" href="css/style.css" />
-  <title>Formulaire de commande</title>
+  <title>Panier</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 
    
@@ -20,7 +20,7 @@
       <div class="row">
         <nav class="col navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="index.html">
-            <img class="img-fluid"  src="logo.png" width="200" height="100" alt="Logo" />
+            <img class="img-fluid"  src="logo.png" width="300" height="200" alt="Logo" />
             </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,33 +31,22 @@
                 <a class="nav-link ml-4 mr-4" href="index.html">Listing</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link ml-2 mr-4" href="formulairecommande.html">Commandes</a>
+                <a class="nav-link ml-2 mr-4" href="pageconfirmationcommande.html">Commandes</a>
               </li>
             </ul>
           </div>
 
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
-               <li class="nav-item active">
+               <li class="nav-item active ">
                 <a class="nav-link ml-4 mr-4" href="panier.html">
                   <img class="iconechariot" src="chariotgris1.png" width="40" height="40" alt="icone chariot" />
-                Panier
+                Panier</a>
                   <div class="dropdown">
                   <div id="cart">
-                  <p><span id="in-cart-items-num">0</span> Articles</p>
+                    <button type="button" class="btn btn-primary mb-4 mt-4" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-light ml-2">Clear Cart</button></div>
                   </div>
-
-                      <ul id="cart-dropdown" hidden>
-                         <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
-                          <li class="go-to-cart hidden"><a href="panier.html">Voir le panier</a></li>
-                      </ul>
-                  </div>
-                 </a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-              </li>
-            </ul>
+                   
           </div>
 
        </nav>
@@ -66,25 +55,79 @@
   </div>
 <div class="row">
        <div class="col-12 col-lg-8">
-        <div class="card mb-4 mt-lg-4 border-grey ">
+        <div class="card ml-4 mb-1 mt-lg-4 border-grey ">
           <div class="card-body">
-            <h2 class="name"><span class="font-weight-bold">Votre panier</span></h5>  
+            <h1 class="name"><span class="font-weight-bold text-dark">Votre panier</span></h1>  
             <table class="table">
               <thead>
-                <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
+                <tr><th>Article</th><th>Prix €<span id="prixrecalcule"></span></th><th>Image</th><th>Couleur</th></tr>
               </thead>
               <tbody id="cart-tablebody"></tbody>
             </table>
-            <p>Sous total : <span class="subtotal"></span>€</p>
+            <p class="text-dark">Total : <span id="total"></span>€</p>
             <form>
-            <button type="submit" formaction="formulairecommande.html">Passer la commande</button>
+            <button class="text-dark" type="submit" formaction="pageconfirmationcommande.html">Voir confirmation de commande</button>
             </form>
           </div>
         </div>
       </div>
 </div>
+<div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="card ml-4 mb-4 mt-lg-4 border-grey ">
+          <div class="card-body">
+            <form id="myForm" method="post">
+              <h2 class="text-dark">Validez votre commande</h2>
+              <h3 class="text-dark">Vous y êtes presque!</br> Remplissez le questionnaire et validez votre commande</h3>
+              <fieldset class="Coordonnées">
+                <legend class="text-dark">Vos Coordonnées</legend>
+                <p>
+                    <label for="nom" class="text-dark">Nom</label> :
+                    <input type="text" name="nom" id="nom" required>
+                    <span id="aideNom"></span>
+                </p>
+                <p>
+                    <label for="prenom">Prénom</label> :
+                    <input type="text" name="prenom" id="prenom" required>
+                    <span id="aidePrenom"></span>
+                </p>
+                <p>
+                    <label for="courriel">Mail</label> :
+                    <input type="email" name="courriel" id="courriel" required placeholder="utilisateur@domaine.fr">
+                    <span id="aideCourriel"></span>
+                </p>
+                <p>
+                    <label for="mail_conf">Confirmer mail </label>
+                    <input type="text" name="Confirmer mail" id="mail_conf">
+                    <span id="aideConfirmCourriel"></span>
+                </p>
+                </fieldset>
 
+                <fieldset class="Adresse">
+                <legend>Votre Adresse</legend>
+                <p>
+                    <label for="adress">Adresse</label>
+                    <input type="text" name="adress" id="adress">
+                </p>
+                <p>
+                    <label for="ville">Ville</label>
+                    <input type="text" name="ville" id="ville">
+                </p>
+                          
+         
+                </fieldset>
+
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Annuler">
+                
+            </form>
+
+        </div>
+      </div>
+</div>
  <script src="panier.js" defer></script>
+ <script src="panierincrement.js" defer></script>
+ 
 
 </body>
 </html>
