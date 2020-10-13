@@ -31,13 +31,14 @@ function displayItemProduct(product,listElement){
     const myPara1 = document.createElement('img');
     const myPara2 = document.createElement('p');
     const myPara3 = document.createElement('p');
+    myPara3.className= "price";
     const myPara4 = document.createElement('p');
     const myList = document.createElement('ul');
     
     myH2.textContent = product.name;
     myPara1.src = product.imageUrl;
     myPara2.textContent = 'id_Produit : ' + product._id;        
-    myPara3.textContent = 'Prix :  ' + product.price + '€';
+    myPara3.textContent = product.price/100 + '€';
     myPara4.textContent = 'Existe en différents coloris : ';
     
     const colors = product.colors; 
@@ -60,7 +61,7 @@ function displayItemProduct(product,listElement){
     var btn = document.createElement("a");
     btn.href = "details.html?id="+ product._id;
     itemElement.appendChild(btn);
-    btn.textContent ="SHOW DETAILS"
+    btn.textContent ="Voir Détails"
     
 
 
