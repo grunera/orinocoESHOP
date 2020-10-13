@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/style2.css"/>
   <title>confirmation de commande</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,12 +16,12 @@
 
 
 <body>
-  <div class="bg-dark">
+   <div class="bg-dark">
     <div class="container">
       <div class="row">
         <nav class="col navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="index.html">
-            <img class="img-fluid"  src="logo.png" width="300" height="200" alt="Logo" />
+            <img class="img-fluid"  src="logo.png" width="200" height="200" alt="Logo" />
             </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,15 +39,15 @@
 
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
-               <li class="nav-item active ">
+               <li class="nav-item active">
                 <a class="nav-link ml-4 mr-4" href="panier.html">
-                  <img class="iconechariot" src="chariotgris1.png" width="40" height="40" alt="icone chariot" />
-                Panier
-                  <div class="dropdown">
-                  <div id="cart">
-                    <button type="button" class="btn btn-primary mb-4 mt-4" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-light ml-2">Clear Cart</button></div>
-                  </div>
-                   
+                  <img class="iconechariot" src="chariotgris1.png" width="50" height="50" alt="icone chariot" />
+                Panier </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+              </li>
+            </ul>
           </div>
 
        </nav>
@@ -55,14 +56,14 @@
   </div>
 <div class="row">
        <div class="col-12 col-lg-8">
-        <div class="card mb-1 mt-lg-4 border-grey ">
+        <div class="card ml-4 mb-1 mt-4 mr-2 lg-4 border-grey ">
           <div class="card-body">
             <h1 class="name"><span class="font-weight-normal text-dark">Nous vous remercions pour votre commande!</br>Détail commande : </h1>
              
-            <table class="table mt-4">
+            <table class="table ml-2 mt-4 mr-2">
               <thead>
                 <tr>
-                  <th class="text-dark">Total : <span id="total"></span>€</th><th>order_id : <span id="order_id"></span></th><th>Coordonnées et adresse de livraison : <span id="coordonnees"></tr>
+                  <th class="text-dark mt-4">Total : <span id="total"></span>€</th></br><th>n°cde : <span id="order_id"></span></th></br><th>Coordonnées & livraison : <span id="coordonnees"></tr></br>
               </thead>
             
             </table>

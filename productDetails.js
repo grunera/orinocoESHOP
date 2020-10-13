@@ -25,21 +25,27 @@ function displayItemProduct(product,listElement){
 	const itemElement = document.createElement('div');
   itemElement.className = "produit";
 
-	const myH2 = document.createElement('h2');
+	  const myH2 = document.createElement('h2');
+    myH2.className = "nomproduit";
     const myPara1 = document.createElement('img');
+    myPara1.className ="image";
     const myPara2 = document.createElement('p');
+    myPara2.className="id";
     const myPara3 = document.createElement('p');
+    myPara3.className = "description"
     const myPara4 = document.createElement('p');
+    myPara4.className ="pricedetail";
     const myPara5 = document.createElement('p');
+    myPara5.className ="colors";
     
     const myList = document.createElement('select');
     myList.id = 'selectedoption';
     
-    myH2.textContent = product.name;
+    myH2.textContent = 'PELUCHE ' + product.name;
     myPara1.src = product.imageUrl;
     myPara2.textContent = 'id_Produit : ' + product._id;
     myPara3.textContent = 'Description : '+ product.description;      
-    myPara4.textContent = 'Prix : ' + product.price/100 + '€';
+    myPara4.textContent = product.price/100 + '€';
     myPara5.textContent = 'Choisissez votre coloris : ';
   
     const colors = product.colors; 

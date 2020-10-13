@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style2.css"/>
+
   <title>Panier</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,12 +17,12 @@
 
 
 <body>
-  <div class="bg-dark">
+   <div class="bg-dark">
     <div class="container">
       <div class="row">
         <nav class="col navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="index.html">
-            <img class="img-fluid"  src="logo.png" width="300" height="200" alt="Logo" />
+            <img class="img-fluid"  src="logo.png" width="200" height="200" alt="Logo" />
             </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,15 +40,15 @@
 
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
-               <li class="nav-item active ">
+               <li class="nav-item active">
                 <a class="nav-link ml-4 mr-4" href="panier.html">
-                  <img class="iconechariot" src="chariotgris1.png" width="40" height="40" alt="icone chariot" />
-                Panier</a>
-                  <div class="dropdown">
-                  <div id="cart">
-                    <button type="button" class="btn btn-primary mb-4 mt-4" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-light ml-2">Clear Cart</button></div>
-                  </div>
-                   
+                  <img class="iconechariot" src="chariotgris1.png" width="50" height="50" alt="icone chariot" />
+                Panier </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+              </li>
+            </ul>
           </div>
 
        </nav>
@@ -54,17 +56,17 @@
     </div>
   </div>
 <div class="row">
-       <div class="col-12 col-lg-8">
-        <div class="card ml-4 mb-1 mt-lg-4 border-grey ">
+       <div class="col-12 col-lg-8 mt-4 ml-2">
+        <div class="card ml-4 mb-4 mt-lg-4 border-grey ">
           <div class="card-body">
             <h1 class="name"><span class="font-weight-bold text-dark">Votre panier</span></h1>  
             <table class="table">
               <thead>
                 <tr><th>Article</th><th>Prix €<span id="prixrecalcule"></span></th><th>Image</th><th>Couleur</th></tr>
               </thead>
-              <tbody id="cart-tablebody"></tbody>
+              <tbody id="cart-tablebody mb-4"></tbody>
             </table>
-            <p class="text-dark">Total : <span id="total"></span>€</p>
+            <p class="text-dark mt-4 pt-4">Total : <span id="total"></span>€</p>
             <form>
             <button class="text-dark" type="submit" formaction="pageconfirmationcommande.html">Voir confirmation de commande</button>
             </form>
@@ -124,6 +126,7 @@
 
         </div>
       </div>
+  </div>
 </div>
  <script src="panier.js" defer></script>
  <script src="panierincrement.js" defer></script>
