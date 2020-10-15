@@ -89,7 +89,7 @@ function addToStorage(id,option){
 
 
 async function init(){
-	const id = getProductId();
+  const id = getProductId();
   const product = await getProduct(id)
   console.log(product)
   displayItemProduct(product,document.getElementById('product'))
@@ -97,6 +97,7 @@ async function init(){
     console.log('')
     const option = document.getElementById("selectedoption").value;
     addToStorage(id,option)
+    alert('votre produit a été ajouté au panier')
 
   })
 

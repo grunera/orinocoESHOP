@@ -18,7 +18,7 @@ async function getProducts(){
 
 function displaySelectedProducts(filteredProducts,selectedProducts){
 	
-  const tableElement = document.getElementById('cart-tablebody')
+  const tableElement = document.getElementById('cart-tablebody mb-4')
   for (let product of filteredProducts){
   	product.option = selectedProducts[product._id]
 
@@ -30,7 +30,8 @@ function displaySelectedProducts(filteredProducts,selectedProducts){
   	priceElement.textContent = product.price/100 + '€';
   	const imageElement = document.createElement('img')
   	imageElement.src = product.imageUrl;
-  	const colorElement = document.createElement('td')
+    imageElement.className= 'imagepanier';
+    const colorElement = document.createElement('td')
   	colorElement.textContent = product.option;
   	
 
@@ -49,6 +50,9 @@ function recalculPrice(filteredProducts){
 
 }
 
+function calculateTotal(filteredProducts) {
+    return filteredProducts.reduce((acc,cur)=> acc + cur.price,0)
+}
 
 function displayTotal(filteredProducts){
    const total = filteredProducts.reduce((acc,cur)=> acc + cur.price,0)
@@ -57,23 +61,23 @@ function displayTotal(filteredProducts){
 }
 
 async function init(){
-	const selectedProducts = await readStorage()
-	console.log(selectedProducts)
+  const selectedProducts = await readStorage()
+  console.log(selectedProducts)
     const products = await getProducts()
     console.log(products)
     const filteredProducts = products.filter(
-    	(product)=>selectedProducts[product._id])
+      (product)=>selectedProducts[product._id])
     console.log(filteredProducts)
     displaySelectedProducts(filteredProducts,selectedProducts)
     displayTotal(filteredProducts)
 
     const formElement = document.getElementById('myForm')
-    formElement.addEventListener('submit',(evt)=>{
+    formElement.addEventListener('submit',async (evt)=>{
     evt.preventDefault()
-    	console.log(evt.target)
-    	if(isFormValid(evt.target)){
-        await sendOrder(evt.target, filteredProducts,selectedProducts)
-    	}
+      console.log(evt.target)
+      if(isFormValid(evt.target)){
+        await sendOrder(evt.target, filteredProducts)
+      }
 
 
     })
@@ -83,13 +87,38 @@ async function init(){
 
 init() 
 
-async function sendOrder(form,filteredProducts,selectedProducts){
-const nomElement
-const prenomElement
-const emailElement
-const adressElement
-const villeElement
-
+async function sendOrder(form,filteredProducts){
+const lastName = form.nom.value
+const firstName = form.prenom.value
+const email = form.courriel.value
+const address = form.adress.value
+const city = form.ville.value
+const products = filteredProducts.map((product) => product._id)
+    const contact = {
+        lastName,
+        firstName,
+        email,
+        address,
+        city,
+    }
+    const orderRequest = await fetch('http://localhost:3000/api/teddies/order', {
+        method: 'POST',
+        mode: 'cors',
+        credentials: 'same-origin',
+        referrerPolicy: 'no-referrer',
+        headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        body: JSON.stringify({
+            contact,
+            products,
+        })
+    })
+    const {orderId} = await orderRequest.json()
+    console.log(orderId)
+    localStorage.setItem('total_order', calculateTotal(filteredProducts))
+    document.location.href = 'commande.html?order_id='+orderId
 }
 
 
