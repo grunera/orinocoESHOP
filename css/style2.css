@@ -1,3 +1,4 @@
+
 @media (max-width: 766px) {
 
 #bloc_7 p{
@@ -63,6 +64,11 @@ div.produit a{
     margin-bottom:15px;
 
 }
-
+.table .imagepanier{
+  width:35px;
+  height:auto;
+  padding-top:10px;
+  padding-bottom:10px;
+}
 }
 

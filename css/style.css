@@ -120,6 +120,16 @@ div.produit img{
 .produit image{
   width:80%;
 }
+
+.table .imagepanier{
+  width:30%;
+  height:auto;
+}
+
+.text-dark mt-4 pt-4 p{
+  font-weight:bold;
+}
+
 div.produit a{
     width: 25px;
     height: 80px;
@@ -152,7 +162,6 @@ div.produit a{
   padding:25px;
   border-radius:4px;
 }
-
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
@@ -319,7 +328,8 @@ caption {
 }
 
 th {
-  text-align: inherit;
+  text-align: center;
+  width:30%;
 }
 
 label {
@@ -3396,6 +3406,10 @@ div #boutique{
   5px;
   border-radius:4px;
 }
+.card ml-4 mb-4 mt-lg-4 border-grey{
+  text-align: center;
+  width:25%;
+}
 
 .produit .nomproduit{
  font-size:5rem;
@@ -5898,6 +5912,7 @@ a.badge-dark:focus, a.badge-dark.focus {
     margin-left: -1px;
     border-left-width: 1px;
   }
+  
 }
 @media (min-width: 992px) {
   .list-group-horizontal-lg {
