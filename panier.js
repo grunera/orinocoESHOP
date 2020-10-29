@@ -5,20 +5,19 @@
 function readStorage(){
 const storage = localStorage.getItem("shop")
 return JSON.parse(storage)
-
-
-
 }
 
 async function getProducts(){
 	const response = await fetch('http://localhost:3000/api/teddies')
     return response.json()
-
 }
+
+
+
 
 function displaySelectedProducts(filteredProducts,selectedProducts){
 	
-  const tableElement = document.getElementById('cart-tablebody mb-4')
+  const tableElement = document.getElementById('cart-tablebody')
   for (let product of filteredProducts){
   	product.option = selectedProducts[product._id]
 
